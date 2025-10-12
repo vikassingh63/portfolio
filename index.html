@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
@@ -24,6 +25,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <!-- ✅ Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- ✅ jQuery (required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ✅ Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
 </head>
 <body class="home3-page">
 
@@ -31,9 +41,9 @@
         <source src="assets/images/video3.mp4" type="video/mp4">
     </video>
 
-    <div class="page-loader">
+    <!-- <div class="page-loader">
         <div class="bounceball"></div>
-    </div>
+    </div> -->
 
 
     <div class="responsive-sidebar-menu">
@@ -99,6 +109,7 @@
                     </li>
                 </ul>
             </div>
+
         </div>
     </div>
 
@@ -139,7 +150,7 @@
             </a>
         </li> -->
         <li>
-            <a class="scroll-to" href="#contact">
+            <a class="scroll-to" href="#contact">   
                 <span>Contact</span> <i class="las la-envelope"></i>
             </a>
         </li>
@@ -219,10 +230,10 @@
 
                             <p class="scroll-animation" data-animation="fade_from_bottom">I craft visually stunning and user-friendly websites that elevate brands and drive results. From concept to launch — pixel perfect designs with clean, optimized code.</p>
 
-                            <a target="_blank" href="#portfolio" 
+                            <a href="#portfolio" 
                                 class="go-to-project-btn scroll-to scroll-animation" 
                                 data-animation="rotate_up">
-                                <img src="assets/images/round-text.png" alt="">
+                                <img src="assets/images/round-text.png" alt="cart">
                                 <i class="las la-arrow-down"></i>
                             </a>
         
@@ -733,7 +744,7 @@
                             <h3 class="scroll-animation" data-animation="fade_from_bottom">vr552078@gmail.com</h3>
                             <p id="required-msg">* Marked fields are required to fill.</p>
 
-                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST" action="https://wpriverthemes.com/HTML/drake/mailer.php">
+                            <form class="contact-form scroll-animation d-none" data-animation="fade_from_bottom" method="POST" action="https://wpriverthemes.com/HTML/drake/mailer.php">
                                 <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
                                     Your message was sent successfully.
                                 </div>
@@ -741,25 +752,25 @@
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="full-name">full Name <sup>*</sup></label>
-                                            <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
+                                            <input type="text" name="full-name" id="full-name" placeholder="Enter Full Name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="email">Email <sup>*</sup></label>
-                                            <input type="email" name="email" id="email" placeholder="Your email adress">
+                                            <input type="email" name="email" id="email" placeholder="Enter email address">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="phone-number">phone <span>(optional)</span></label>
-                                            <input type="text" name="phone-number" id="phone-number" placeholder="Your number phone">
+                                            <input type="text" name="phone-number" id="phone-number" placeholder="Enter phone number">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="subject">subject <sup>*</sup></label>
-                                            <select name="subject" id="subject">
+                                            <select name="subject" class="select2">
                                                 <option value="">Select a subject</option>
                                                 <option value="subject1">Subject 1</option>
                                                 <option value="subject2">Subject 2</option>
@@ -807,7 +818,7 @@
     </main>
     
 
-    <script src="assets/js/jquery.js"></script>
+    <!-- <script src="assets/js/jquery.js"></script> -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <script src="assets/js/gsap.min.js"></script>
@@ -818,7 +829,13 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/color.js"></script>
-</body>
 
-<!-- Mirrored from wpriverthemes.com/HTML/drake/home3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Sep 2025 17:14:50 GMT -->
+    <script>
+        $('.select2').select2({
+            placeholder: "Select a Subject",
+            allowClear: true,
+            minimumResultsForSearch: Infinity
+        });
+    </script>
+</body>
 </html>
