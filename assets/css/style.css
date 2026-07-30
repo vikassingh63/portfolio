@@ -2009,3 +2009,40 @@ body .body-overlay {
 .global-color .setting-toggle i {
     animation: rotating 3s infinite linear !important;
 }
+
+/* Custom styling for category tabs */
+.custom-tabs {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 50rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.custom-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+    border-radius: 50rem;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+.custom-tabs .nav-link:hover:not(.active) {
+    color: #1f1f1f;
+    background-color: #f8f9fa;
+}
+
+/* Card hover animation */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}

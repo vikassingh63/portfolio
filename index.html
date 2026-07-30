@@ -163,7 +163,7 @@
         </div>
         <img class="me" src="assets/images/vikas-singh.png" alt="Me">
         <h2 class="email">vr552078@gmail.com</h2>
-        <h2 class="address">Address: Noida sector 62</h2>
+        <h2 class="address">Address: Farrukhabad</h2>
         <p class="copyright">&copy; 2025 Vikas Kumar. All Rights Reserved</p>
         <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
             <li>
@@ -337,8 +337,8 @@
                             <div class="services-items">
                                 <div class="service-item scroll-animation" data-animation="fade_from_bottom">
                                     <i class="las la-bezier-curve"></i>
-                                    <h2>Website Design</h2>
-                                    <p>Expert in HTML5, CSS3, JavaScript, Bootstrap 5, and React website development</p>
+                                    <h2>Web developer</h2>
+                                    <p>Expert in HTML5, CSS3, JavaScript, Bootstrap 5, Php, Mysql,  and React development</p>
                                     <span class="projects">110+ Projects</span>
                                 </div>
                                 
@@ -431,6 +431,26 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img width="65" src="assets/images/5968332.png" alt="bootstrap">
+                                            <h1 class="percent">60%</h1>
+                                        </div>
+                                        <p class="name">Php</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img width="120" src="assets/images/Mysql.png" alt="bootstrap">
+                                            <h1 class="percent">60%</h1>
+                                        </div>
+                                        <p class="name">Mysql</p>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
                                     <div class="skill">
                                         <div class="skill-inner">
@@ -517,10 +537,30 @@
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects</span></h1>
                             </div>
-        
-                            <div class="row portfolio-items">
 
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_left">
+                            <div class="d-flex justify-content-start mb-5">
+                                <ul class="nav nav-pills custom-tabs" id="categoryTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="all-tab" data-category="all" type="button">All Products</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="design-tab" data-category="design" type="button">Web design</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="graphic-design" data-category="graphic-design" type="button">Graphic design</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="video-editing-tab" data-category="video-editing" type="button">Video editing</button>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                    
+                           
+        
+                            <div class="row portfolio-items" id="tabContentContainer">
+
+                                <div class="col-md-12 scroll-animation category-item" data-animation="fade_from_left" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/booking-portal/booking.crmtravel.in/acs-website.png" data-lightbox="example-1">
@@ -539,7 +579,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_left">
+                                <div class="col-md-12 scroll-animation category-item" data-animation="fade_from_left" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/booking-portal/yatracart/1.png" data-lightbox="example-1">
@@ -558,7 +598,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/travelebay/1.png" data-lightbox="example-1">
@@ -575,7 +615,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/booking-portal/b2b-seeingo/1.png" data-lightbox="example-1">
@@ -592,7 +632,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-12 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/booking-portal/zotrav/png.png" data-lightbox="example-1">
@@ -609,7 +649,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/magicmusafir/png.png" data-lightbox="example-1">
@@ -626,7 +666,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/forevertourism/3.png" data-lightbox="example-1">
@@ -643,7 +683,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-12 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/xploreraahein/png-1.png" data-lightbox="example-1">
@@ -660,7 +700,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/felixferiatravel/png.png" data-lightbox="example-1">
@@ -678,7 +718,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/seeingo/png.png" data-lightbox="example-1">
@@ -695,7 +735,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-12 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/tripey/png.png" data-lightbox="example-1">
@@ -712,7 +752,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_bottom">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_bottom" data-category="design">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/primeholidays/png.png" data-lightbox="example-1">
@@ -730,7 +770,7 @@
                                     </div>
                                 </div>
         
-                                <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="design">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
                                             <a target="_blank" href="assets/images/websites/axtra/png.png" data-lightbox="example-1">
@@ -746,6 +786,16 @@
                                         <h2><a target="_blank" href="https://dev.crmtravel.in/axtra/">Axtra</a></h2>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="video-editing">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uyRxeONhfn4?si=UCMdyzwmQO6wGb2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
 
                             </div>
         
@@ -857,6 +907,29 @@
             allowClear: true,
             minimumResultsForSearch: Infinity
         });
+    </script>
+    <script>
+        const container = document.querySelector('.portfolio-items'); // Class selector fix (. added)
+        let content = '';
+
+        for (let i = 1; i <= 67; i++) {
+        content += `
+            <div class="col-md-6 scroll-animation category-item" data-animation="fade_from_right" data-category="graphic-design">
+                <div class="portfolio-item portfolio-half">
+                    <div class="portfolio-item-inner">
+                        <a target="_blank" href="assets/images/graphic/${i}.png" data-lightbox="example-1">
+                            <img src="assets/images/graphic/${i}.png" alt="Portfolio">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        // Pehle se maujood code ko hataye bina last me add karega
+        if (container) {
+        container.insertAdjacentHTML('beforeend', content);
+        }
     </script>
 </body>
 </html>

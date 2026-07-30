@@ -271,3 +271,32 @@ function scroll_animations() {
     });
 }
 scroll_animations();
+
+$(document).ready(function() {
+    $('#categoryTabs button').on('click', function() {
+        // Remove active class from all buttons and add to the clicked one
+        $('#categoryTabs button').removeClass('active');
+        $(this).addClass('active');
+
+        // Get the selected category
+        const selectedCategory = $(this).attr('data-category');
+
+        // Filter items with fade effect
+        if (selectedCategory === 'all') {
+            $('.category-item').fadeOut(200, function() {
+                $(this).fadeIn(300);
+            });
+        } else {
+            $('.category-item').each(function() {
+                const itemCategory = $(this).attr('data-category');
+                if (itemCategory === selectedCategory) {
+                    $(this).fadeOut(200, function() {
+                        $(this).fadeIn(300);
+                    });
+                } else {
+                    $(this).fadeOut(200);
+                }
+            });
+        }
+    });
+});
