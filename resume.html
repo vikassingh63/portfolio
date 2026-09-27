@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vikas Kumar — Web Designer &amp; Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFEAE1;
+    --ink: #1B1B1B;
+    --ink-soft: #4A4640;
+    --rust: #D6461B;
+    --rust-deep: #A6350F;
+    --line: rgba(27,27,27,0.15);
+    --card: #F7F4EE;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1B1810;
+      --ink: #F2EEE4;
+      --ink-soft: #C9C3B5;
+      --rust: #FF6A3D;
+      --rust-deep: #FF8A5C;
+      --line: rgba(242,238,228,0.18);
+      --card: #241F16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1B1810;
+    --ink: #F2EEE4;
+    --ink-soft: #C9C3B5;
+    --rust: #FF6A3D;
+    --rust-deep: #FF8A5C;
+    --line: rgba(242,238,228,0.18);
+    --card: #241F16;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 64px 28px 90px; }
+  a { color: var(--rust); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Hero */
+  .hero { position: relative; padding-bottom: 34px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
+  .eyebrow { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.02em; margin: 0 0 10px; }
+  .name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 9vw, 5rem);
+    line-height: 0.98;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .name span { color: var(--rust); font-style: italic; font-weight: 500; }
+  .role {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+    color: var(--ink-soft);
+    margin: 10px 0 26px;
+  }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 0.92rem; }
+  .contact-row a, .contact-row span { color: var(--ink); }
+  .contact-row .dim { color: var(--ink-soft); }
+  .contact-row a, .contact-row .dim { display: inline-flex; align-items: center; gap: 7px; }
+
+  /* Tabler icons */
+  .icon { width: 1em; height: 1em; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  h2.section .icon { width: 0.9em; height: 0.9em; margin-right: 8px; vertical-align: -0.12em; stroke: var(--rust); }
+  h3 .icon { width: 0.85em; height: 0.85em; margin-right: 6px; vertical-align: -0.08em; stroke: var(--rust); }
+  .job-role .icon { width: 0.85em; height: 0.85em; margin-right: 6px; vertical-align: -0.1em; stroke: var(--rust); }
+  .stat .icon { display: block; width: 1.5rem; height: 1.5rem; stroke: var(--rust); margin-bottom: 10px; }
+
+  /* Section headings */
+  h2.section {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-transform: none;
+    color: var(--rust-deep);
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--rust);
+    display: inline-block;
+  }
+  section { margin-bottom: 46px; }
+
+  .lede { font-size: 1.05rem; color: var(--ink-soft); max-width: 62ch; }
+
+  /* Skills */
+  .skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 620px) { .skill-groups { grid-template-columns: 1fr; } }
+  .skill-groups h3 {
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 0.95rem;
+    margin: 0 0 12px; color: var(--ink);
+  }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    font-size: 0.85rem; padding: 6px 13px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); white-space: nowrap;
+  }
+  .pill.accent { border-color: var(--rust); color: var(--rust-deep); }
+
+  /* Timeline */
+  .timeline { border-left: 2px solid var(--line); padding-left: 26px; }
+  .job { position: relative; padding-bottom: 30px; }
+  .job:last-child { padding-bottom: 0; }
+  .job::before {
+    content: ""; position: absolute; left: -32px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%; background: var(--rust);
+  }
+  .job-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .job-role { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.08rem; }
+  .job-co { color: var(--ink-soft); font-style: italic; }
+  .job-dates { font-size: 0.85rem; color: var(--rust-deep); font-weight: 600; margin: 3px 0 8px; }
+  .job p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 620px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat {
+    background: var(--card); border: 1px solid var(--line);
+    padding: 18px 16px; border-radius: 10px;
+  }
+  .stat .num { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.7rem; color: var(--rust); }
+  .stat .label { font-size: 0.8rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* Education */
+  .edu-item { margin-bottom: 10px; font-size: 0.97rem; }
+  .edu-item .deg { font-weight: 600; }
+  .edu-item .place { color: var(--ink-soft); }
+
+  footer {
+    margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line);
+    font-size: 0.85rem; color: var(--ink-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+
+  /* Print — fit everything on one page */
+  @media print {
+    @page { size: A4; margin: 10mm; }
+    :root { --paper: #EFEAE1; --card: #F7F4EE; }
+    html, body { height: auto; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 12.5px; }
+    .wrap { max-width: 100%; padding: 0; }
+    .hero { padding-bottom: 14px; margin-bottom: 16px; }
+    .name { font-size: 2.1rem; }
+    .role { margin: 6px 0 12px; font-size: 1rem; }
+    .eyebrow { margin-bottom: 4px; }
+    section { margin-bottom: 16px; }
+    h2.section { font-size: 0.9rem; margin-bottom: 10px; padding-bottom: 4px; }
+    .lede { font-size: 0.88rem; }
+    .skill-groups { gap: 14px; }
+    .skill-groups h3 { font-size: 0.85rem; margin-bottom: 6px; }
+    .pill { font-size: 0.72rem; padding: 3px 9px; }
+    .timeline { padding-left: 20px; }
+    .job { padding-bottom: 12px; }
+    .job-role { font-size: 0.92rem; }
+    .job-dates { font-size: 0.72rem; margin: 1px 0 3px; }
+    .job p { font-size: 0.8rem; }
+    .stats { gap: 8px; }
+    .stat { padding: 10px 10px; }
+    .stat .icon { width: 1.1rem; height: 1.1rem; margin-bottom: 4px; }
+    .stat .num { font-size: 1.2rem; }
+    .stat .label { font-size: 0.68rem; }
+    .edu-item { font-size: 0.82rem; margin-bottom: 4px; }
+    footer { margin-top: 18px; padding-top: 10px; font-size: 0.7rem; }
+    .job::before{left: -26px;} .wrap{padding: 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Résumé</p>
+    <h1 class="name">Vikas <span>Kumar</span></h1>
+    <p class="role">Web Designer & Developer - Full Stack Developer, React JS Developer</p>
+    <div class="contact-row">
+      <a href="tel:6307953107"><svg class="icon" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>6307953107</a>
+      <a href="mailto:vr552078@gmail.com"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /><path d="M3 7l9 6l9 -6" /></svg>vr552078@gmail.com</a>
+      <a href="https://vikassingh63.github.io/portfolio/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>Portfolio ↗</a>
+      <span class="dim"><svg class="icon" viewBox="0 0 24 24"><path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" /><path d="M4 6.371h7" /><path d="M5 9c0 2.144 2.252 3.908 6 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /><path d="M6.694 3l.793 .582" /></svg>Hindi &amp; English</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section"><svg class="icon" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>Profile</h2>
+    <p class="lede">Web designer and developer with 3+ years in web design and 6 months building applications with PHP and MySQL. Focused on responsive, client-friendly design and dependable web project management — blending frontend development with a graphic design background to build engaging digital experiences.</p>
+  </section>
+
+  <section>
+    <h2 class="section"><svg class="icon" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>Skills</h2>
+    <div class="skill-groups">
+      <div>
+        <h3><svg class="icon" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>Development</h3>
+        <div class="pills">
+          <span class="pill">HTML5</span>
+          <span class="pill">CSS3</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Bootstrap 5</span>
+          <span class="pill">jQuery</span>
+          <span class="pill accent">PHP — 6 mo</span>
+          <span class="pill accent">MySQL — 6 mo</span>
+          <span class="pill accent">React JS — Learning</span>
+        </div>
+      </div>
+      <div>
+        <h3><svg class="icon" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>Design &amp; Creative</h3>
+        <div class="pills">
+          <span class="pill">Photoshop</span>
+          <span class="pill">Illustrator</span>
+          <span class="pill">CorelDRAW</span>
+          <span class="pill">Premiere Pro</span>
+          <span class="pill">After Effects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <div class="job-head"><span class="job-role"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>Full Stack Developer</span><span class="job-co">Major Sd Singh University</span></div>
+        <div class="job-dates">Aug 2026 – Present</div>
+        <p>Managing web design and development projects end to end.</p>
+      </div>
+      <div class="job">
+        <div class="job-head"><span class="job-role"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>Senior Web Designer</span><span class="job-co">CRM Travel IT Solutions</span></div>
+        <div class="job-dates">Jan 2023 – Jul 2026</div>
+        <p>Led the web design team to deliver modern, high-quality solutions for clients.</p>
+      </div>
+      <div class="job">
+        <div class="job-head"><span class="job-role"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>Web Designer</span><span class="job-co">Niwesh Tech</span></div>
+        <div class="job-dates">Jul 2022 – Jan 2023</div>
+        <p>Delivered responsive web designs aligned closely with client needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" /><path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889" /><path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889" /></svg>Highlights</h2>
+    <div class="stats">
+      <div class="stat"><svg class="icon" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" /><path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889" /><path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889" /></svg><div class="num">100+</div><div class="label">Web design projects</div></div>
+      <div class="stat"><svg class="icon" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg><div class="num">10+</div><div class="label">Web dev projects</div></div>
+      <div class="stat"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg><div class="num">3+ yrs</div><div class="label">Web design experience</div></div>
+      <div class="stat"><svg class="icon" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg><div class="num">6 mo</div><div class="label">PHP / MySQL experience</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section"><svg class="icon" viewBox="0 0 24 24"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>Education</h2>
+    <div class="edu-item"><span class="deg">Bachelor of Science</span></div>
+    <div class="edu-item"><span class="place">Intermediate &amp; High School — UP Board</span></div>
+    <div class="edu-item"><span class="place">Course, Arena Animation, Sector 18, Noida</span></div>
+  </section>
+
+  <footer>
+    <span>Vikas Kumar — Web Designer &amp; Developer</span>
+    <span>vr552078@gmail.com · 6307953107</span>
+  </footer>
+
+</div>
+</body>
+</html>
